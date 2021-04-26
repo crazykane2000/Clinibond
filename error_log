@@ -1,0 +1,6 @@
+[02-Apr-2021 14:29:44 UTC] PHP Notice:  Undefined index: current_diagnosis in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 7
+[02-Apr-2021 14:29:44 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 15
+[02-Apr-2021 14:29:44 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 16
+[13-Apr-2021 22:19:07 UTC] PHP Notice:  Undefined index: current_diagnosis in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 7
+[13-Apr-2021 22:19:07 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 15
+[13-Apr-2021 22:19:07 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/z55piaciqrid/public_html/CliniBondV2/action_page.php on line 16

@@ -1,0 +1,28 @@
+<?php session_start();
+    include 'pdo_class_data.php';
+    include 'connection.php';
+    $pdo_auth = authenticate_admin();
+    $pdo = new PDO($dsn, $user, $pass, $opt);
+    include 'function.php';
+    if (exist("members", "email", $_REQUEST['email'])) {
+      header('Location:members.php?choice=error&value=Member with Same email ID Already Exist');
+      exit();
+    }
+
+   // Add User Starts Here
+    if(isset($_REQUEST['add_user'])){
+      //print_r($_REQUEST);
+      $table = "members";
+      $key_list = "`name`, `email`, `phone`, `status`, `pass`";
+      $value_list = "'".$_REQUEST['name']."',";
+      $value_list.="'".$_REQUEST['email']."',";
+      $value_list.="'".$_REQUEST['phone']."',";
+      $value_list.="'".$_REQUEST['status']."',";
+      $value_list.="'".$_REQUEST['pass']."'";
+      $result = $pdo->exec("INSERT INTO `$table` ($key_list) VALUES ($value_list)");
+
+      add_notification("A New Member Created", "admin", 0);
+      header('Location:members.php?choice=success&value=Added new member');
+      exit();
+    }
+?>
